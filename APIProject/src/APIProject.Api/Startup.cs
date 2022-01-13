@@ -43,6 +43,11 @@ namespace APIProject.Api
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "APIProject.Api v1"));
             }
 
+            if (!env.IsDevelopment())
+            {
+                app.UseHttpsRedirection();
+            }
+            
             app.UseHttpsRedirection();
 
             app.UseRouting();
