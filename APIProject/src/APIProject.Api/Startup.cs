@@ -47,8 +47,6 @@ namespace APIProject.Api
             {
                 app.UseHttpsRedirection();
             }
-            
-            app.UseHttpsRedirection();
 
             app.UseRouting();
 
