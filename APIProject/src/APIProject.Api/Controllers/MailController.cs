@@ -1,13 +1,14 @@
 ﻿using System;
 using APIProject.Api.Tests;
+using Microsoft.AspNetCore.Mvc;
 
 namespace APIProject.Api.Controllers
 {
-    public class MailController
+    public class MailController : ControllerBase
     {
-        public IAsyncResult SendVoucherEmail(VoucherEmailRequest request)
+        public ActionResult SendVoucherEmail(VoucherEmailRequest request)
         {
-            throw new NotImplementedException();
+            return Ok();
         }
     }
 }

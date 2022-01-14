@@ -14,7 +14,6 @@ namespace APIProject.Api.Tests
         public void ReturnASuccessfulResponse()
         {
             MailController controller = new();
-
             VoucherEmailRequest request = new()
             {
                 ClientName = "Exeal Hoteles",
@@ -22,7 +21,7 @@ namespace APIProject.Api.Tests
                 RecipientEmail = "vkovaleva@voxelgroup.net"
             };
             
-            IAsyncResult response = controller.SendVoucherEmail(request);
+            ActionResult response = controller.SendVoucherEmail(request);
             
             response.Should().BeOfType<OkResult>();
         }
